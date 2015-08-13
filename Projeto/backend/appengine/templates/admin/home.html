@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h1>{% trans %}Painel de Administrador{% endtrans %}</h1>
+            <ul>
+                <li>
+                    <a href="{{ security_table_path }}">{% trans %}Tabela de Seguraça de Path{% endtrans %}</a>
+                </li>
+            </ul>
+            <h2>{% trans %} Configurações{% endtrans %}</h2>
+            <ul>
+                <li><a href="{{ permission_admin_path }}">{% trans %} Permissões de Usuário{% endtrans %}</a></li>
+                <li><a href="{{ facebook_admin_path }}">{% trans %}Login por Facebook{% endtrans %}</a></li>
+                <li><a href="{{ passwordless_admin_path }}">{% trans %}Permissões sem senha{% endtrans %}</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+{% block rodape %}{% endblock %}

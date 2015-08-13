@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    {% set erros = erros or None %}
+    {% set books = books or None %}
+     <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <br/>
+
+                <div class="well">
+                    <h1 class="text-center">{% trans %}Formulário de Livro{% endtrans %}</h1>
+
+                    <form action="{{ salvar_path }}" method="post" role="form">
+                        {{ csrf_input() }}
+                        {{ form_input('Título','title',books.title,erros.title) }}
+                        {{ form_input('Preço','price',books.price,erros.price) }}
+                        {{ form_input('Lançamento','release',books.release,erros.release) }}
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% block rodape %}{% endblock %}
+{% endblock %}

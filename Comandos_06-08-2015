@@ -375,4 +375,173 @@ Cloning into 'Jeff_Script'...
 jeffrei@Jeffrei:~$ ^C
 jeffrei@Jeffrei:~$ 
 
+De noite
+
+jeffrei@Jeffrei:~$ git clone git@github.com:JeffreiToledo/Jeff_Script.git
+Cloning into 'Jeff_Script'...
+The authenticity of host 'github.com (192.30.252.129)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.252.129' (RSA) to the list of known hosts.
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+jeffrei@Jeffrei:~$ cd Jeff_Script/
+jeffrei@Jeffrei:~/Jeff_Script$ ls
+jeffrei@Jeffrei:~/Jeff_Script$ ls -a
+.  ..  .git  .gitignore
+jeffrei@Jeffrei:~/Jeff_Script$ cat .git
+.git/       .gitignore  
+jeffrei@Jeffrei:~/Jeff_Script$ cat .git
+.git/       .gitignore  
+jeffrei@Jeffrei:~/Jeff_Script$ cat .gitignore 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+jeffrei@Jeffrei:~/Jeff_Script$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	Comandos_06-08-2015
+nothing added to commit but untracked files present (use "git add" to track)
+jeffrei@Jeffrei:~/Jeff_Script$ git add*
+git: 'add*' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+jeffrei@Jeffrei:~/Jeff_Script$ git add Comandos_06-08-2015
+jeffrei@Jeffrei:~/Jeff_Script$ git commit -m "Primeiro commit"
+[master 5f79120] Primeiro commit
+ Committer: Jeffrei <jeffrei@Jeffrei.(none)>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 378 insertions(+)
+ create mode 100644 Comandos_06-08-2015
+jeffrei@Jeffrei:~/Jeff_Script$ git config -global user.name "JeffreiToledo"
+error: unknown switch `g'
+usage: git config [options]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 adds a new variable: name value
+    --unset               removes a variable: name [value-regex]
+    --unset-all           removes all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            opens an editor
+    --get-color <slot>    find the color configured: [default]
+    --get-colorbool <slot>
+                          find the color setting: [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+
+jeffrei@Jeffrei:~/Jeff_Script$ git config --global user.name "JeffreiToledo"
+jeffrei@Jeffrei:~/Jeff_Script$ git config --global user.email "jef_mor@hotmail.com"
+jeffrei@Jeffrei:~/Jeff_Script$ git commit -m "Primeiro commit"# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+jeffrei@Jeffrei:~/Jeff_Script$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+jeffrei@Jeffrei:~/Jeff_Script$ git push
+Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 4.15 KiB, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:JeffreiToledo/Jeff_Script.git
+   400586c..5f79120  master -> master
+jeffrei@Jeffrei:~/Jeff_Script$ git status
+# On branch master
+nothing to commit (working directory clean)
+jeffrei@Jeffrei:~/Jeff_Script$ 
+
+
 

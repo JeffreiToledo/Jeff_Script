@@ -1,0 +1,9 @@
+{% extends '/base/base.html' %}
+{% block body %}
+    <form action="{{ save_path }}" method="post">
+    {{ csrf_input() }}
+        {{ form_input('Nome','nome','Jeffrei')}}
+        <button type="submit">Salvar</button>
+    </form>
+
+{% endblock %}

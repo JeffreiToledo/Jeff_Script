@@ -1,0 +1,35 @@
+{% extends 'clothings/base.html' %}
+{% block title %}Roupas{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{% trans %}Lista de Coleções {% endtrans %}  </h1>
+                {% if _logged_user and ('ADMIN' in _logged_user.groups) %}
+                <a href="{{ admin_path }}" class="btn btn-success">{% trans %}Administrador{% endtrans %}</a>
+                {% endif %}
+                <hr/>
+                <h2>{% trans %}Coleções{% endtrans %}</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>{% trans %}Data{% endtrans %}</th>
+                        <th>{% trans %}Preço{% endtrans %}</th>
+                        <th>{% trans %}Nome{% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for clothing in clothings %}
+                        <tr>
+                            <td>{{ clothing.date }}</td>
+                            <td>{{ clothing.price }}</td>
+                            <td>{{ clothing.name }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block rodape %}{% endblock %}
