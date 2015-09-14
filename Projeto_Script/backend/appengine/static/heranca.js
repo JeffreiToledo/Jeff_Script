@@ -37,5 +37,3 @@ contadorObservador.adicionarOuvinte(observador);
 
 contadorObservador.contar();
 contadorObservador.contar();
-
-
